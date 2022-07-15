@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 function Header(props) {
     return (
@@ -17,42 +18,47 @@ function Header(props) {
                             {/* menu start */}
                             <nav className="main-menu">
                                 <ul>
-                                    <li className="current-list-item"><a href="#">Home</a>
+                                    <li className="current-list-item">
+                                        <NavLink className="current-list-item" to={"/Home"}>Home</NavLink>
                                         <ul className="sub-menu">
-                                            <li><a href="index.html">Static Home</a></li>
-                                            <li><a href="index_2.html">Slider Home</a></li>
+                                            <li><NavLink to={"/Static"}>Static Home</NavLink></li>
+                                            <li><NavLink to={"/Slider"}>Slider Home</NavLink></li>
                                         </ul>
                                     </li>
-                                    <li><a href="about.html">About</a></li>
+                                    <li>
+                                        <NavLink to={"/About"}>About</NavLink>
+                                    </li>
                                     <li><a href="#">Pages</a>
                                         <ul className="sub-menu">
-                                            <li><a href="404.html">404 page</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="checkout.html">Check Out</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="news.html">News</a></li>
-                                            <li><a href="shop.html">Shop</a></li>
+                                            <li><NavLink href="404.html" to={"/Page404"}>404 page</NavLink></li>
+                                            <li><NavLink href="about.html" to={"/About"}>About</NavLink></li>
+                                            <li><NavLink href="cart.html" to={"/Cart"}>Cart</NavLink ></li>
+                                            <li><NavLink href="checkout.html" to={"/Checkout"}>Check Out</NavLink></li>
+                                            <li><NavLink href="contact.html" to={"/Contact"}>Contact</NavLink></li>
+                                            <li><NavLink href="news.html" to={"/News"}>News</NavLink></li>
+                                            <li><NavLink href="shop.html" to={"/Shop"}>Shop</NavLink></li>
                                         </ul>
                                     </li>
-                                    <li><a href="news.html">News</a>
+                                    <li><NavLink href="news.html" to={"/News"}>News</NavLink>
                                         <ul className="sub-menu">
-                                            <li><a href="news.html">News</a></li>
-                                            <li><a href="single-news.html">Single News</a></li>
+                                            <li><NavLink href="news.html" to={"/News"}>News</NavLink></li>
+                                            <li><NavLink href="single-news.html" to={"/Singlenews"}>Single News</NavLink></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="shop.html">Shop</a>
+                                    <li>
+                                        <NavLink to={"/Contact"}>Contact</NavLink>
+                                    </li>
+                                    <li><NavLink to={"/Shop"}>Shop</NavLink>
                                         <ul className="sub-menu">
-                                            <li><a href="shop.html">Shop</a></li>
-                                            <li><a href="checkout.html">Check Out</a></li>
-                                            <li><a href="single-product.html">Single Product</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
+                                            <li><NavLink href="shop.html" to={"/Shop"}>Shop</NavLink></li>
+                                            <li><NavLink href="checkout.html" to={"/Checkout"}>Check Out</NavLink></li>
+                                            <li><NavLink href="single-product.html" to={"/Singleproduct"}>Single Product</NavLink></li>
+                                            <li><NavLink href="cart.html" to={"/cart"}>Cart</NavLink></li>
                                         </ul>
                                     </li>
                                     <li>
                                         <div className="header-icons">
-                                            <a className="shopping-cart" href="cart.html"><i className="fas fa-shopping-cart" /></a>
+                                            <NavLink className="shopping-cart" href="cart.html" to={"/Cart"}><i className="fas fa-shopping-cart" /></NavLink>
                                             <a className="mobile-hide search-bar-icon" href="#"><i className="fas fa-search" /></a>
                                         </div>
                                     </li>
